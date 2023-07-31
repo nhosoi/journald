@@ -2,6 +2,8 @@
 ---
 - name: Simple journald role invocation
   hosts: all
+  tags:
+    - tests::needs_large_diskspace
   vars:
     journald_persistent: true
     journald_max_disk_size: 2048
